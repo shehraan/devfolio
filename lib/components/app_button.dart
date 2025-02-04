@@ -6,8 +6,8 @@ class AppButton extends StatelessComponent {
   final String label;
   final String href;
 
-  final Unit? width;
-  final Unit? height;
+  final double? width;
+  final double? height;
 
   const AppButton({
     super.key,
@@ -22,7 +22,7 @@ class AppButton extends StatelessComponent {
     yield a(
       classes: 'app-button',
       target: Target.blank,
-      styles: Styles.box(width: width, height: height),
+      styles: Styles.box(width: width?.px, height: height?.px),
       href: href,
       [
         span(classes: 'label', [text(label)])

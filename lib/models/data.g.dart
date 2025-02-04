@@ -6,20 +6,20 @@ part of 'data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DataImpl _$$DataImplFromJson(Map<String, dynamic> json) => _$DataImpl(
-      basic: Basic.fromJson(json['basic'] as Map<String, dynamic>),
+_$DataImpl _$$DataImplFromJson(Map json) => _$DataImpl(
+      basic: Basic.fromJson(Map<String, Object?>.from(json['basic'] as Map)),
       socials: (json['socials'] as List<dynamic>)
-          .map((e) => Social.fromJson(e as Map<String, dynamic>))
+          .map((e) => Social.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
-      about: About.fromJson(json['about'] as Map<String, dynamic>),
+      about: About.fromJson(Map<String, Object?>.from(json['about'] as Map)),
       services: (json['services'] as List<dynamic>)
-          .map((e) => ServiceData.fromJson(e as Map<String, dynamic>))
+          .map((e) => ServiceData.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
       projects: (json['projects'] as List<dynamic>)
-          .map((e) => Project.fromJson(e as Map<String, dynamic>))
+          .map((e) => Project.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
       contact: (json['contact'] as List<dynamic>)
-          .map((e) => Contact.fromJson(e as Map<String, dynamic>))
+          .map((e) => Contact.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
     );
 

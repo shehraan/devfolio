@@ -6,8 +6,7 @@ part of 'service_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ServiceDataImpl _$$ServiceDataImplFromJson(Map<String, dynamic> json) =>
-    _$ServiceDataImpl(
+_$ServiceDataImpl _$$ServiceDataImplFromJson(Map json) => _$ServiceDataImpl(
       icon: json['icon'] as String,
       title: json['title'] as String,
     );

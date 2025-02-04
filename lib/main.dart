@@ -6,6 +6,7 @@
 // Server-specific jaspr import.
 import 'package:devfolio/constants/theme.dart';
 import 'package:jaspr/server.dart';
+import 'pages/experience.dart'; // Import Experience Page
 
 // Imports the [App] component.
 import 'app.dart';

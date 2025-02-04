@@ -6,8 +6,7 @@ part of 'project.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ProjectImpl _$$ProjectImplFromJson(Map<String, dynamic> json) =>
-    _$ProjectImpl(
+_$ProjectImpl _$$ProjectImplFromJson(Map json) => _$ProjectImpl(
       banner: json['banner'] as String,
       icon: json['icon'] as String,
       title: json['title'] as String,

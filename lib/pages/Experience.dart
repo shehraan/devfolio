@@ -4,14 +4,10 @@ import 'dart:io';
 import 'package:devfolio/components/footer.dart';
 import 'package:devfolio/components/nav_bar.dart';
 import 'package:devfolio/models/data.dart';
-import 'package:devfolio/sections/about_me.dart';
-import 'package:devfolio/sections/basic_info.dart';
-import 'package:devfolio/sections/contact.dart';
-import 'package:devfolio/sections/projects.dart';
-import 'package:devfolio/sections/services.dart';
+import 'package:devfolio/sections/experiences.dart';
 import 'package:jaspr/server.dart';
 
-class Home extends AsyncStatelessComponent {
+class Experience extends AsyncStatelessComponent {
   Future<Data> fetchData() async {
     final String fileResponse =
         File('${Directory.current.path}/web/data/data.json').readAsStringSync();
@@ -26,21 +22,10 @@ class Home extends AsyncStatelessComponent {
   Stream<Component> build(BuildContext context) async* {
     final data = await fetchData();
 
-    yield div(classes: 'home-body', [
+    yield div(classes: 'experience-body', [
       NavBar(),
-      BasicInfoSection(
-        basic: data.basic,
-        socials: data.socials,
-      ),
-      AboutMeSection(),
-      ProjectsSections(
-        projects: data.projects,
-      ),
-      ServicesSection(
-        services: data.services,
-      ),
-      ContactSection(
-        contacts: data.contact,
+      ExperienceSection(
+        experiences: data.experiences,
       ),
       Footer(),
     ]);
@@ -48,7 +33,7 @@ class Home extends AsyncStatelessComponent {
 
   @css
   static final List<StyleRule> styles = [
-    css('.home-body')
+    css('.experience-body')
         .box(
           width: 100.vw,
         )

@@ -19,7 +19,7 @@ class BasicInfoSection extends StatelessComponent {
       div(classes: 'info', [
         div(classes: 'welcome', [
           span(classes: 'welcome-text', [
-            text('WELCOME TO MY PORTFOLIO'),
+            text('WELCOME TO MY PAGE'),
           ]),
           img(
             classes: 'wave',
@@ -32,7 +32,7 @@ class BasicInfoSection extends StatelessComponent {
         span(classes: 'subtitle', [
           i(classes: 'fa-solid fa-play play-icon', []),
           span(classes: 'dynamic-subtitles', [
-            text('Flutter Enthusiast'),
+            text('Programmer | Developer | Designer'),
           ])
         ]),
         div(classes: 'socials', [

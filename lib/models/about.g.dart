@@ -6,11 +6,11 @@ part of 'about.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AboutImpl _$$AboutImplFromJson(Map<String, dynamic> json) => _$AboutImpl(
+_$AboutImpl _$$AboutImplFromJson(Map json) => _$AboutImpl(
       description: json['description'] as String,
       tech: (json['tech'] as List<dynamic>).map((e) => e as String).toList(),
       works: (json['works'] as List<dynamic>)
-          .map((e) => Work.fromJson(e as Map<String, dynamic>))
+          .map((e) => Work.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
       heading: json['heading'] as String,
     );

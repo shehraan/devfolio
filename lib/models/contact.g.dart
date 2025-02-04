@@ -6,8 +6,7 @@ part of 'contact.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ContactImpl _$$ContactImplFromJson(Map<String, dynamic> json) =>
-    _$ContactImpl(
+_$ContactImpl _$$ContactImplFromJson(Map json) => _$ContactImpl(
       icon: json['icon'] as String,
       title: json['title'] as String,
       description: json['description'] as String,

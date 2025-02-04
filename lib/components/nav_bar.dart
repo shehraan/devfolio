@@ -30,17 +30,17 @@ class NavBar extends StatelessComponent {
           ],
         ),
         a(
-          href: '#services',
-          classes: 'navbar-label',
-          [
-            text('SERVICES'),
-          ],
-        ),
-        a(
           href: '#projects',
           classes: 'navbar-label',
           [
             text('PROJECTS'),
+          ],
+        ),
+        a(
+          href: '#services',
+          classes: 'navbar-label',
+          [
+            text('MY SKILLS'),
           ],
         ),
         a(

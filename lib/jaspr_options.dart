@@ -12,9 +12,10 @@ import 'package:devfolio/pages/home.dart' as prefix6;
 import 'package:devfolio/sections/about_me.dart' as prefix7;
 import 'package:devfolio/sections/basic_info.dart' as prefix8;
 import 'package:devfolio/sections/contact.dart' as prefix9;
-import 'package:devfolio/sections/projects.dart' as prefix10;
-import 'package:devfolio/sections/services.dart' as prefix11;
-import 'package:devfolio/app.dart' as prefix12;
+import 'package:devfolio/sections/experiences.dart' as prefix10;
+import 'package:devfolio/sections/projects.dart' as prefix11;
+import 'package:devfolio/sections/services.dart' as prefix12;
+import 'package:devfolio/app.dart' as prefix13;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -34,14 +35,16 @@ import 'package:devfolio/app.dart' as prefix12;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix12.App: ClientTarget<prefix12.App>('app'),
+    prefix13.App: ClientTarget<prefix13.App>('app'),
     prefix0.AppButton: ClientTarget<prefix0.AppButton>('components/app_button', params: _prefix0AppButton),
     prefix1.ContactCard: ClientTarget<prefix1.ContactCard>('components/contact', params: _prefix1ContactCard),
     prefix2.Footer: ClientTarget<prefix2.Footer>('components/footer'),
     prefix3.NavBar: ClientTarget<prefix3.NavBar>('components/nav_bar'),
     prefix4.ProjectCard: ClientTarget<prefix4.ProjectCard>('components/project_card', params: _prefix4ProjectCard),
     prefix5.ServiceCard: ClientTarget<prefix5.ServiceCard>('components/service_card', params: _prefix5ServiceCard),
-    prefix7.AboutMeSection: ClientTarget<prefix7.AboutMeSection>('sections/about_me', params: _prefix7AboutMeSection),
+    prefix7.AboutMeSection: ClientTarget<prefix7.AboutMeSection>('sections/about_me'),
+    prefix10.ExperienceSection:
+        ClientTarget<prefix10.ExperienceSection>('sections/experiences', params: _prefix10ExperienceSection),
   },
   styles: () => [
     ...prefix0.AppButton.styles,
@@ -54,9 +57,9 @@ final defaultJasprOptions = JasprOptions(
     ...prefix7.AboutMeSection.styles,
     ...prefix8.BasicInfoSection.styles,
     ...prefix9.ContactSection.styles,
-    ...prefix10.ProjectsSections.styles,
-    ...prefix11.ServicesSection.styles,
-    ...prefix12.AppState.styles,
+    ...prefix11.ProjectsSections.styles,
+    ...prefix12.ServicesSection.styles,
+    ...prefix13.AppState.styles,
   ],
 );
 
@@ -67,4 +70,4 @@ Map<String, dynamic> _prefix1ContactCard(prefix1.ContactCard c) =>
 Map<String, dynamic> _prefix4ProjectCard(prefix4.ProjectCard c) =>
     {'title': c.title, 'description': c.description, 'icon': c.icon, 'banner': c.banner, 'url': c.url};
 Map<String, dynamic> _prefix5ServiceCard(prefix5.ServiceCard c) => {'icon': c.icon, 'label': c.label};
-Map<String, dynamic> _prefix7AboutMeSection(prefix7.AboutMeSection c) => {'about': c.about, 'basic': c.basic};
+Map<String, dynamic> _prefix10ExperienceSection(prefix10.ExperienceSection c) => {'experiences': c.experiences};

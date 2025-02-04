@@ -6,7 +6,7 @@ part of 'work.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$WorkImpl _$$WorkImplFromJson(Map<String, dynamic> json) => _$WorkImpl(
+_$WorkImpl _$$WorkImplFromJson(Map json) => _$WorkImpl(
       image: json['image'] as String,
       url: json['url'] as String,
       height: (json['height'] as num).toInt(),

@@ -1,18 +1,12 @@
 import 'package:devfolio/components/app_button.dart';
 import 'package:devfolio/constants/theme.dart';
-import 'package:devfolio/models/about.dart';
-import 'package:devfolio/models/basic.dart';
 import 'package:devfolio/utils/assets.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
 class AboutMeSection extends StatelessComponent {
-  final About about;
-  final Basic basic;
   const AboutMeSection({
     super.key,
-    required this.about,
-    required this.basic,
   });
 
   @override
@@ -20,9 +14,6 @@ class AboutMeSection extends StatelessComponent {
     yield section(classes: 'about-me-section', [
       span(classes: 'title', id: 'about', [
         text('About Me'),
-      ]),
-      span(classes: 'subtitle', [
-        text('Get to know me :)'),
       ]),
       div(classes: 'about-section-body', [
         div(classes: 'profile-picture', []),
@@ -33,16 +24,13 @@ class AboutMeSection extends StatelessComponent {
               [
                 text('Who am I?'),
               ]),
-          span(classes: 'intro-heading', [
-            text(about.heading),
-          ]),
           span(
               classes: 'intro-details',
               styles: Styles.text(
                 color: Colors.lightGrey,
               ),
               [
-                text(about.description),
+                text('I’m a 18yr old working on machine learning for biology. Im curious about how we can reduce the time it takes to make biological discoveries. Biology is the most complex puzzle in the world and will take a lot of time and resources to solve. My goal for the next few years is to dive deep into the intersection of proteomics and machine learning to prepare the world for the eventual explosion of biotech. I believe for biology, right now is like what the 2000s were for the internet. I like to write essays, play sports, and workout in my free time. subscribe to my monthly updates'),
               ]),
           div(classes: 'divider', []),
           span(
@@ -52,7 +40,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Technologies I have worked with:'),
               ]),
           div(classes: 'tech-stack', [
-            for (final t in about.tech)
+            for (final t in ['Tech1', 'Tech2', 'Tech3'])
               span([
                 i(classes: 'fa-solid fa-play play-icon', []),
                 span(classes: 'tech-item', [
@@ -64,10 +52,10 @@ class AboutMeSection extends StatelessComponent {
           div(classes: 'personal-row', [
             div([
               span(classes: 'personal-label', [
-                text('Name: '),
+                text('From: '),
               ]),
               span(classes: 'personal-value', [
-                text('${basic.firstName} ${basic.lastName}'),
+                text('Toronto, Canada'),
               ]),
             ]),
             div([
@@ -75,26 +63,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Email: '),
               ]),
               span(classes: 'personal-value', [
-                text(basic.email),
-              ]),
-            ])
-          ]),
-          div(styles: Styles.box(height: 15.px), []),
-          div(classes: 'personal-row', [
-            div([
-              span(classes: 'personal-label', [
-                text('Age: '),
-              ]),
-              span(classes: 'personal-value', [
-                text(basic.age.toString()),
-              ]),
-            ]),
-            div([
-              span(classes: 'personal-label', [
-                text('From: '),
-              ]),
-              span(classes: 'personal-value', [
-                text(basic.address),
+                text('shehraanhafiz@gmail.com'),
               ]),
             ])
           ]),
@@ -102,16 +71,8 @@ class AboutMeSection extends StatelessComponent {
           div(classes: 'work-row', [
             AppButton(
               label: 'RESUME',
-              href: basic.resume,
+              href: 'your_resume_link',
             ),
-            div(classes: 'divider', styles: Styles.box(width: 80.px), []),
-            for (final work in about.works)
-              a(classes: 'work-item', href: work.url, target: Target.blank, [
-                img(
-                  src: work.image,
-                  height: work.height,
-                ),
-              ]),
           ])
         ]),
       ])

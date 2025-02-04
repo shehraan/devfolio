@@ -6,7 +6,7 @@ part of 'social.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SocialImpl _$$SocialImplFromJson(Map<String, dynamic> json) => _$SocialImpl(
+_$SocialImpl _$$SocialImplFromJson(Map json) => _$SocialImpl(
       icon: json['icon'] as String,
       url: json['url'] as String,
     );
